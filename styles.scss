@@ -1,0 +1,79 @@
+.maxmt-admin-crafts-table {
+  padding: 16px;
+
+  form {
+    margin-top: 16px;
+
+    mat-form-field {
+      margin-right: 0 12px 0 0;
+
+      .input-suffix-icon {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+
+    .no-data-info-state {
+      padding: 16px;
+    }
+
+    td:not(.mat-footer-cell):not(.edit-column) {
+      &:hover {
+        cursor: move;
+      }
+    }
+
+    td.edit-column {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .drag-column {
+      width: 68px;
+    }
+
+    .edit-column {
+      width: 68px;
+    }
+
+    td.mat-footer-cell {
+      border: none;
+    }
+  }
+
+  .loading-message {
+    text-align: center;
+    margin-top: 12px;
+  }
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  height: 48px;
+  display: table;
+}
+
+.cdk-drag-preview td {
+  flex-grow: 2;
+  font-size: 14px;
+  padding: 4px;
+  vertical-align: middle;
+  border-bottom: 0;
+}
+
+.cdk-drag-placeholder {
+  background-color: var(--background-hover);
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drop-list-dragging .mat-row:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
